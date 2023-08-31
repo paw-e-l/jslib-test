@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    node:
+      image: node:19-alpine
+      user: "node"
+      working_dir: /home/node/app
+      volumes:
+        - ./:/home/node/app
+      command: /bin/ash -c "yarn && yarn build"
+
+      
